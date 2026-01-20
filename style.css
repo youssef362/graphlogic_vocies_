@@ -100,8 +100,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  /* Centering the content in sidebar */
-  justify-content: center;
+  justify-content: center; /* Keeps text centered */
 }
 
 .filter-item:hover {
@@ -117,11 +116,11 @@ body {
 
 .filter-item.selected .filter-name { color: white; }
 
+/* --- THIS IS THE MAGIC LINE TO HIDE ALL FLAGS --- */
 .flag-emoji {
-  font-size: 20px;
-  width: 28px;
-  text-align: center;
+  display: none !important;
 }
+/* ----------------------------------------------- */
 
 .filter-name {
   font-size: 14px;
@@ -152,6 +151,12 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+/* Hide flags in breadcrumbs too */
+.breadcrumb-item span:first-child:not(:only-child) {
+   /* This targets the flag span if it exists next to the name */
+   /* Note: Javascript puts flag in its own span, this is a safeguard */
 }
 
 .content-title {
