@@ -33,6 +33,75 @@ body {
   line-height: 1.5;
 }
 
+/* --- BEAUTIFUL INSTRUCTIONS CARD (New) --- */
+
+.instructions-card {
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+  backdrop-filter: blur(12px);           /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(12px);   /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 24px 30px;
+  max-width: 800px;
+  margin: 24px auto 0;
+  text-align: left;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.instruction-step {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.instruction-step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  background: white;
+  color: #00C072; /* Matches your theme green */
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 2px; /* Aligns circle with the first line of text */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.step-text {
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.email-link {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  transition: all 0.2s;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.email-link:hover {
+  border-bottom-color: white;
+  background: rgba(255,255,255,0.1);
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* ----------------------------------------- */
+
 .main-content {
   display: grid;
   grid-template-columns: 320px 1fr;
@@ -123,8 +192,7 @@ body {
   display: none !important; 
 }
 
-/* 2. Hides flags in the top header breadcrumbs (like "Arabic Voices") */
-/* Logic: If an item has 2 spans (Flag + Name), hide the first one. */
+/* 2. Hides flags in the top header breadcrumbs */
 .breadcrumb-item span:first-child:not(:last-child) {
   display: none !important;
 }
