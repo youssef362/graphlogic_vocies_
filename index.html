@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GraphLogic Voice Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎙️ GraphLogic</h1>
+      
+      <div style="display: inline-block; text-align: left; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 12px; margin-top: 10px;">
+        <p style="margin-bottom: 10px; font-size: 16px;">
+          1 - Please choose voice that you would like to add in voice bot up to 5 voices include male and female.
+        </p>
+        <p style="margin: 0; font-size: 16px;">
+          2 - Copy name and ID for each voice and send it via email to 
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mohamed.attia@graphlogic.ai" target="_blank" style="color: #fff; text-decoration: underline; font-weight: bold;">mohamed.attia@graphlogic.ai</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="loadingMessage" class="header">
+      <div class="spinner" style="margin: 0 auto;"></div>
+      <p style="margin-top: 15px;">Initializing GraphLogic Voices...</p>
+    </div>
+
+    <div id="mainContent" class="main-content" style="display:none;">
+      <div class="sidebar">
+        <input type="text" class="search-box" id="searchBox" placeholder="Search languages..." />
+
+        <div class="filter-section">
+          <div class="filter-label">Languages</div>
+          <div class="filter-list" id="languageList"></div>
+        </div>
+
+        <div class="filter-section" id="accentSection" style="display:none;">
+          <div class="filter-label">Accents</div>
+          <div class="filter-list" id="accentList"></div>
+        </div>
+      </div>
+
+      <div class="content-area">
+        <div class="content-header">
+          <div class="breadcrumb" id="breadcrumb"></div>
+          <h2 class="content-title" id="contentTitle">Select a language</h2>
+          <p class="content-subtitle" id="contentSubtitle">Choose from the sidebar to explore voices</p>
+        </div>
+
+        <div id="voiceGrid" class="voice-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
